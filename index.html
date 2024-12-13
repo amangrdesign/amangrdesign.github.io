@@ -1,75 +1,46 @@
-/* Reset default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio - Screenshot Aplikasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio Aplikasi Web dan Mobile</h1>
+        <p>Berikut adalah screenshot aplikasi web dan mobile yang saya buat.</p>
+    </header>
 
-/* Body and general styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
+    <section class="screenshots">
+        <h2>Screenshot Aplikasi Web</h2>
+        <div class="screenshot-gallery">
+            <div class="screenshot-item">
+                <img src="assets/images/web/homepage.png" alt="Homepage Web">
+                <p>Homepage Web</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="assets/images/web/dashboard.png" alt="Dashboard Web">
+                <p>Dashboard Web</p>
+            </div>
+        </div>
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
-}
+        <h2>Screenshot Aplikasi Mobile</h2>
+        <div class="screenshot-gallery">
+            <div class="screenshot-item">
+                <img src="assets/images/mobile/ios/home.png" alt="Home iOS">
+                <p>Home iOS</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="assets/images/mobile/android/home.png" alt="Home Android">
+                <p>Home Android</p>
+            </div>
+        </div>
+    </section>
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-size: 1.1rem;
-}
-
-/* Screenshot section */
-.screenshots {
-    padding: 2rem;
-}
-
-.screenshot-gallery {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.screenshot-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-}
-
-.screenshot-item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-}
-
-.screenshot-item p {
-    padding: 1rem;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+    <footer>
+        <p>&copy; 2024 Portfolio by AmangrDesign</p>
+    </footer>
+</body>
+</html>
