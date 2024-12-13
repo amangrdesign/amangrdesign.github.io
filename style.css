@@ -108,3 +108,19 @@ footer p {
         margin-bottom: 2rem;
     }
 }
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-image img {
+    max-width: 250px; /* Sesuaikan ukuran foto profil */
+    border-radius: 50%; /* Menjadikan gambar berbentuk bulat */
+}
