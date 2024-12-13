@@ -7,17 +7,18 @@
 
 /* Body and general styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    padding-bottom: 50px; /* To prevent content from being hidden by fixed footer */
 }
 
 header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 header h1 {
@@ -27,11 +28,21 @@ header h1 {
 
 header p {
     font-size: 1.1rem;
+    margin-top: 0.2rem;
 }
 
 /* Screenshot section */
 .screenshots {
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.screenshots h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #444;
 }
 
 .screenshot-gallery {
@@ -39,7 +50,7 @@ header p {
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .screenshot-item {
@@ -49,6 +60,12 @@ header p {
     overflow: hidden;
     width: 300px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-5px);
 }
 
 .screenshot-item img {
@@ -61,6 +78,7 @@ header p {
     padding: 1rem;
     font-size: 1rem;
     background-color: #f9f9f9;
+    color: #555;
 }
 
 /* Footer */
@@ -72,4 +90,21 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .screenshot-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .screenshot-item {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
 }
