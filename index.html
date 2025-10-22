@@ -1,448 +1,661 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio - Web Developer</title>
-    <!-- Import Poppins and Open Sans from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mazzard+H:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMANGR DESIGN | Full Stack Web & Mobile Developer</title>
+    <meta name="description" content="Full Stack Developer building modern web and mobile applications that are fast, scalable, and beautifully designed.">
+    <meta name="keywords" content="Full Stack Developer, Web Developer, Mobile Developer, React, Node.js, Flutter, Portfolio, AMANGR DESIGN">
 
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    
 
-</head>
-<body>
-    <!-- Header with Navigation -->
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="images/logo.jpg" alt="Logo" class="logo-img" />
-                <h1 class="logo">AMANGR <b>DESIGN</b></h1>
-            </div>
-            <nav>
-                <ul class="container-header-menu-list">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </nav>
+    <!-- Tailwind & Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Alpine.js Portfolio Component -->
+    <script>
+    function portfolio() {
+    return {
+        category: 'web',
+        lightbox: { open: false, images: [], index: 0 },
+
+        projects: [
+        /* --- WEB --- */
+        {
+            category: 'web',
+            type: 'Web App',
+            title: 'Application Portal',
+            desc: 'Progressive web app for secure employee access to internal services.',
+            images: [
+            'images/portfolio/web/portal-mobile/login.png',
+            'images/portfolio/web/portal-mobile/dashboard.png',
+            'images/portfolio/web/portal-mobile/about.png',
+            'images/portfolio/web/portal-mobile/sidebar.png',
+            'images/portfolio/web/portal-mobile/guesehat.png',
+            'images/portfolio/web/portal-mobile/leaverequest.png'
+            ]
+        },
+        {
+            category: 'web',
+            type: 'Corporate Website',
+            title: 'Company Profile Site',
+            desc: 'Modern company website built with CodeIgniter and MySQL backend.',
+            images: [
+            'images/portfolio/web/galenium/home.png',
+            'images/portfolio/web/galenium/about.png',
+            'images/portfolio/web/galenium/product.png',
+            'images/portfolio/web/galenium/product-detail.png'
+            ]
+        },
+        {
+            category: 'web',
+            type: 'Web App',
+            title: 'EGIS Portal',
+            desc: 'Internal application for managing employee data and workflow securely.',
+            images: [
+            'images/portfolio/web/galenium-egis/main.png'
+            ]
+        },
+        {
+            category: 'web',
+            type: 'Web App',
+            title: 'Psychometric Portal',
+            desc: 'Online testing app for employee skills and performance evaluation.',
+            images: [
+            'images/portfolio/web/galenium-psikotes/home.png',
+            'images/portfolio/web/galenium-psikotes/test.png',
+            'images/portfolio/web/galenium-psikotes/intro.png',
+            'images/portfolio/web/galenium-psikotes/result.png'
+            ]
+        },
+        {
+            category: 'web',
+            type: 'E-Commerce',
+            title: 'Corporate Store',
+            desc: 'E-commerce system for purchasing pharmaceutical products online.',
+            images: [
+            'images/portfolio/web/galenium-store/home.png',
+            'images/portfolio/web/galenium-store/product.png',
+            'images/portfolio/web/galenium-store/cart.png',
+            'images/portfolio/web/galenium-store/admin-dashboard.png'
+            ]
+        },
+        {
+            category: 'web',
+            type: 'Web App',
+            title: 'Recruitment Portal',
+            desc: 'Web portal that streamlines corporate hiring and job applications.',
+            images: [
+            'images/portfolio/web/galenium-karir/home.png',
+            'images/portfolio/web/galenium-karir/karir.png',
+            'images/portfolio/web/galenium-karir/dashboard.png',
+            'images/portfolio/web/galenium-karir/editor.png'
+            ]
+        },
+        {
+            category: 'web',
+            type: 'Web Company Profile',
+            title: 'Anwliquor',
+            desc: 'Chinese wine blending Eastern philosophy with Australian culture and taste.',
+            images: [
+            'images/portfolio/web/anwliquor/home.png',
+            'images/portfolio/web/anwliquor/home-1.png',
+            'images/portfolio/web/anwliquor/about.png',
+            'images/portfolio/web/anwliquor/about-2.png',
+            'images/portfolio/web/anwliquor/about-3.png',
+            'images/portfolio/web/anwliquor/about-4.png',
+            'images/portfolio/web/anwliquor/contact.png',
+            'images/portfolio/web/anwliquor/portfolio-1.png',
+            'images/portfolio/web/anwliquor/portfolio-2.png',
+            'images/portfolio/web/anwliquor/portfolio-3.png',
+            'images/portfolio/web/anwliquor/portfolio-4.png',
+            'images/portfolio/web/anwliquor/portfolio-5.png',
+            'images/portfolio/web/anwliquor/portfolio-6.png',
+            'images/portfolio/web/anwliquor/portfolio-7.png',
+            ]
+        },        
+        {
+            category: 'web',
+            type: 'Web Company Profile',
+            title: 'Sriwijaya Garden',
+            desc: 'Modern homes at Swirijaya Garden offering comfort and family lifestyle.',
+            images: [
+            'images/portfolio/web/sriwijaya/index.png',
+            ]
+        }, 
+
+        /* --- MOBILE --- */
+        {
+            category: 'mobile',
+            type: 'Mobile App',
+            title: 'Serialization Tracker',
+            desc: 'React Native app for monitoring serialized product distribution.',
+            images: [
+            'images/portfolio/mobile/serialization/login.png',
+            'images/portfolio/mobile/serialization/dashboard.png',
+            'images/portfolio/mobile/serialization/summary-sales-order.png',
+            'images/portfolio/mobile/serialization/sales-order-detail.png',
+            'images/portfolio/mobile/serialization/loading.png'
+            ]
+        },
+        {
+            category: 'mobile',
+            type: 'Mobile App',
+            title: 'Logistics Hub',
+            desc: 'Android app for managing delivery orders and shipment tracking.',
+            images: [
+            'images/portfolio/mobile/cosmos/login.png',
+            'images/portfolio/mobile/cosmos/menu.png',
+            'images/portfolio/mobile/cosmos/ship-confirm.png',
+            'images/portfolio/mobile/cosmos/ship-confirm-success.png'
+            ]
+        },
+        {
+            category: 'mobile',
+            type: 'Mobile App',
+            title: 'Event Moderator',
+            desc: 'Mobile app for managing event sessions, speakers, and schedules.',
+            images: [
+            'images/portfolio/mobile/moderator-events/splashscreen.png',
+            'images/portfolio/mobile/moderator-events/login.png',
+            'images/portfolio/mobile/moderator-events/sidebar.png',
+            'images/portfolio/mobile/moderator-events/speakers.png',
+            'images/portfolio/mobile/moderator-events/speakers-detail.png'
+            ]
+        },
+        {
+            category: 'mobile',
+            type: 'Mobile App',
+            title: 'Lufre Dining & Lounge',
+            desc: 'Lufre Dining app streamlines orders, reservations, and guest satisfaction.”',
+            images: [
+            'images/portfolio/mobile/lufre/intro-1.png',
+            'images/portfolio/mobile/lufre/intro-2.png',
+            'images/portfolio/mobile/lufre/intro-3.png',
+            'images/portfolio/mobile/lufre/login.png',
+            'images/portfolio/mobile/lufre/register.png',
+            'images/portfolio/mobile/lufre/main.png'
+            ]
+        },        
+
+        /* --- UI/UX --- */
+        {
+            category: 'uiux',
+            type: 'UI/UX Design',
+            title: 'Property Management',
+            desc: 'Dashboard and service management design for property operations.',
+            images: [
+            'images/portfolio/uiux/pms/login.png',
+            'images/portfolio/uiux/pms/dashboard.png',
+            'images/portfolio/uiux/pms/properties.png',
+            'images/portfolio/uiux/pms/service-management.png'
+            ]
+        }
+        ],
+
+        // computed
+        get filteredProjects() {
+        return this.projects.filter(p => p.category === this.category);
+        },
+
+        // open lightbox with images array
+        openLightbox(project) {
+        const imgs = Array.isArray(project) ? project : project.images ?? [];
+        this.lightbox.images = imgs.length ? imgs : [''];
+        this.lightbox.index = 0;
+        this.lightbox.open = true;
+        },
+
+        nextImage() {
+        if (this.lightbox.images.length <= 1) return;
+        this.lightbox.index = (this.lightbox.index + 1) % this.lightbox.images.length;
+        },
+
+        prevImage() {
+        if (this.lightbox.images.length <= 1) return;
+        this.lightbox.index = (this.lightbox.index - 1 + this.lightbox.images.length) % this.lightbox.images.length;
+        },
+
+        closeLightbox() {
+        this.lightbox.open = false;
+        this.lightbox.index = 0;
+        }
+    };
+    }
+    </script>
+
+  </head>
+
+  <body class="font-[Poppins] bg-white text-gray-800">
+    <!-- Header -->
+    <header class="border-b border-gray-100 bg-white shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+    <div class="max-w-5xl mx-auto flex justify-between items-center py-4 px-6">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+        <img src="images/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full" />
+        <h1 class="text-2xl" style="font-family: 'Poppins', sans-serif;">
+            AMANGR <span class="text-sky-600 font-bold">DESIGN</span>
+        </h1>
         </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center space-x-6">
+        <ul class="flex space-x-8 text-sm font-medium">
+            <li><a href="#about" class="hover:text-sky-600 transition">About</a></li>
+            <li><a href="#skills" class="hover:text-sky-600 transition">Skills</a></li>
+            <li><a href="#projects" class="hover:text-sky-600 transition">Projects</a></li>
+        </ul>
+        <a
+            href="https://wa.me/6281219125694"
+            target="_blank"
+            class="flex items-center space-x-2 px-4 py-2 border-2 border-sky-600 rounded-full hover:bg-sky-600 hover:text-white transition text-sm font-medium text-sky-600"
+        >
+            Chat With Me
+        </a>
+        </nav>
+
+        <!-- Mobile Burger Button -->
+        <button 
+        class="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-100"
+        @click="mobileMenuOpen = true"
+        aria-label="Open menu"
+        >
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div 
+    class="fixed inset-0 bg-black/70 z-40 flex flex-col items-center justify-center md:hidden"
+    x-show="mobileMenuOpen" 
+    x-transition.opacity
+    >
+    <div class="bg-white rounded-xl w-5/6 max-w-sm p-6 relative flex flex-col items-center space-y-4">
+        <!-- Close Button -->
+        <button 
+        class="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
+        @click="mobileMenuOpen = false"
+        aria-label="Close menu"
+        >
+        ✕
+        </button>
+
+        <!-- Menu Items dengan border bawah -->
+        <a href="#about" @click="mobileMenuOpen = false" 
+        class="w-full text-center text-lg pb-3 font-semibold text-gray-800 hover:text-sky-600 border-b border-gray-200 transition">
+        About
+        </a>
+        <a href="#skills" @click="mobileMenuOpen = false" 
+        class="w-full text-center text-lg pb-3 font-semibold text-gray-800 hover:text-sky-600 border-b border-gray-200 transition">
+        Skills
+        </a>
+        <a href="#projects" @click="mobileMenuOpen = false" 
+        class="w-full text-center text-lg pb-3 font-semibold text-gray-800 hover:text-sky-600 border-b border-gray-200 transition">
+        Projects
+        </a>
+
+        <!-- Chat Button -->
+        <a 
+        href="https://wa.me/6281219125694" 
+        target="_blank"
+        class="mt-4 w-full text-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-full hover:bg-sky-700 transition"
+        >
+        Chat With Me
+        </a>
+    </div>
+    </div>
+
     </header>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="about-text-header-h2">Hi, we’re the team behind AMANGR DESIGN, a digital studio specializing in web and mobile application development, as well as creative designs.</h2>
-                    <p class="about-text-p">At AMANGR DESIGN, we focus on building innovative web and mobile applications, coupled with unique creative designs. From interactive frontends to scalable backends, each project is meticulously crafted to deliver aesthetic, functional, and high-quality results. We are passionate about creating amazing user experiences, and here’s a bit about what we do. <br/><br/>If you’d like to collaborate with us, please feel free to reach out via email: amangrdesign@gmail.com.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/logo.jpg" alt="Anya Manggar" />
-                </div>
-            </div>
-        </div>
+    <section
+    id="about"
+    class="py-20 md:py-28 bg-gradient-to-b from-white via-sky-50 to-sky-100/60 text-center relative overflow-hidden"
+    >
+    <!-- Background Gradients -->
+    <div
+        class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_30%_20%,_rgba(56,189,248,0.25),_transparent_60%),_radial-gradient(circle_at_70%_80%,_rgba(14,165,233,0.2),_transparent_70%)]"
+    ></div>
+
+    <div class="max-w-3xl mx-auto px-6 md:px-10 lg:px-20 relative z-10">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6 md:mb-8 leading-snug text-gray-900">
+        From ideas to real-world apps —  
+        <span class="text-sky-600">I build web and mobile solutions</span>  
+        that connect people and simplify work.
+        </h2>
+
+        <p class="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 md:mb-8">
+        I’m <span class="font-semibold text-gray-900">Anya</span> — a Full Stack Developer passionate about creating  
+        modern <span class="font-semibold text-sky-600">web and mobile applications</span> that turn ideas into real digital experiences.  
+        I focus on building systems that are <span class="font-semibold">fast, scalable, and beautifully designed</span>.
+        </p>
+
+        <p class="text-gray-600 text-sm sm:text-base md:text-lg mb-8 md:mb-10">
+        Let’s collaborate and build something amazing together.<br />
+        Reach out at  
+        <a href="mailto:amangrdesign@gmail.com" class="text-sky-600 font-semibold hover:underline">
+            amangrdesign@gmail.com
+        </a>
+        </p>
+
+        <a
+        href="mailto:amangrdesign@gmail.com"
+        class="inline-block bg-sky-600 text-white font-semibold py-3 px-8 sm:px-10 rounded-full shadow-md hover:bg-sky-700 hover:shadow-lg transition-all duration-300"
+        >
+        Contact Me
+        </a>
+    </div>
+
+    <div
+        class="absolute inset-0 -z-0 opacity-30 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-200/40 via-transparent to-transparent blur-3xl"
+    ></div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>My Projects</h2>
 
-            <!-- Tab Navigation -->
-            <div class="tabs">
-                <button class="tab-button active" data-tab="web">Web</button>
-                <button class="tab-button" data-tab="mobile">Mobile</button>
-                <button class="tab-button" data-tab="uiux">UI/UX Design</button>
-            </div>
+    <!-- Portfolio Section -->
+    <section id="projects" class="py-20 md:py-24 bg-gradient-to-b from-white via-sky-50/40 to-white" x-data="portfolio()">
+    <div class="max-w-6xl mx-auto px-6 md:px-10 lg:px-20 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Portfolio</h2>
+        <p class="text-gray-600 text-base sm:text-lg mb-10 md:mb-12">
+        A selection of projects I've worked on — from web platforms to mobile apps and UI/UX designs, showcasing a balance of functionality, performance, and user-centered design.
+        </p>
 
-            <!-- Project Gallery -->
-            <div class="project-gallery" id="web-projects">
-                <!-- Web Projects -->
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/web/portal-mobile/login.png" alt="Login">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/portal-mobile/dashboard.png" alt="Dashboard">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/portal-mobile/about.png" alt="About">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/portal-mobile/sidebar.png" alt="Sidebar">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/web/portal-mobile/guesehat.png" alt="Article">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/portal-mobile/leaverequest.png" alt="Leave Request">
-                        </div>                                                                      
-                    </div>
-                    <h3>Application Portal</h3>
-                    <ul>
-                        <li class="flex-row"><span><b>Year :</b> 2020</span> <span>Active</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> HTML, CSS, JavaScript & React JS & Redux</li>
-                        <li class="flew-row-line"><b>Backend :</b> Node JS & Express JS</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>A responsive web application designed as a Progressive Web App (PWA) to provide employees with secure and easy access to internal company services. Featuring a user-friendly interface and login via corporate email, it ensures seamless accessibility across devices, offline functionality, and enhanced productivity.</p>
-                </div>                
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium/home.png" alt="Home">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium/about.png" alt="About">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium/product.png" alt="Product">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium/product-detail.png" alt="Product Detail">
-                        </div>                                                                      
-                    </div>
-                    <h3>Corporate Profile</h3>
-                    <ul>
-                        <li class="flex-row notactive"><span><b>Year :</b> 2020</span> <span>Inactive (or Not Active)</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> HTML, CSS, JavaScript & CodeIgniter</li>
-                        <li class="flew-row-line"><b>Backend :</b> CodeIgniter</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>A modern web company profile built with CodeIgniter framework and MySQL database for fast, dynamic, and secure data management. This responsive platform provides an intuitive interface, enabling easy navigation and real-time updates. Seamlessly integrates with MySQL to store and retrieve key company information.</p>
-                </div>
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-egis/main.png" alt="Home">
-                        </div>                                                                  
-                    </div>
-                    <h3>Application Portal</h3>
-                    <ul>
-                        <li class="flex-row notactive"><span><b>Year :</b> 2020</span> <span>Inactive (or Not Active)</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> HTML, CSS, JavaScript & CodeIgniter</li>
-                        <li class="flew-row-line"><b>Backend :</b> CodeIgniter</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>A modern internal application built with CodeIgniter and MySQL, providing fast, secure data management for employees. With an intuitive interface and seamless MySQL integration, it ensures easy navigation, real-time updates, and efficient access to essential company information for enhanced collaboration.</p>
-                </div>
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-psikotes/home.png" alt="Home">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-psikotes/test.png" alt="Test">
-                        </div>      
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-psikotes/intro.png" alt="Intro">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-psikotes/result.png" alt="Result">
-                        </div>                                                                                                 
-                    </div>
-                    <h3>Psychometric Test Portal</h3>
-                    <ul>
-                        <li class="flex-row notactive"><span><b>Year :</b> 2018</span> <span>Inactive (or Not Active)</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> HTML, CSS, JavaScript & CodeIgniter</li>
-                        <li class="flew-row-line"><b>Backend :</b> CodeIgniter</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>A modern online skill test application for a pharmaceutical company, built with CodeIgniter and MySQL. This system allows employees to take tests, view results, and access a dashboard for real-time updates. It provides efficient data management, secure access, and a user-friendly interface for smooth operations.</p>
-                </div>
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-store/home.png" alt="Home">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-store/product.png" alt="Product">
-                        </div>      
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-store/cart.png" alt="Cart">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-store/admin-dashboard.png" alt="Admin Dashboard">
-                        </div>                                                                                                 
-                    </div>
-                    <h3>Corporate E-Commerce Platform</h3>
-                    <ul>
-                        <li class="flex-row notactive"><span><b>Year :</b> 2018</span> <span>Inactive (or Not Active)</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> HTML, CSS, JavaScript & CodeIgniter</li>
-                        <li class="flew-row-line"><b>Backend :</b> CodeIgniter</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>An efficient Corporate E-Commerce Platform built with CodeIgniter and MySQL, designed to streamline the sale of pharmaceutical products. It offers secure, fast transactions with a user-friendly interface, enabling employees to browse, purchase, and manage products with real-time updates.</p>
-                </div>   
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-karir/home.png" alt="Home">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-karir/karir.png" alt="Career">
-                        </div>      
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-karir/dashboard.png" alt="Dashboard">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/web/galenium-karir/editor.png" alt="Content Editor">
-                        </div>                                                                                                 
-                    </div>
-                    <h3>Corporate Recruitment Portal</h3>
-                    <ul>
-                        <li class="flex-row notactive"><span><b>Year :</b> 2018</span> <span>Inactive (or Not Active)</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> HTML, CSS, JavaScript & CodeIgniter</li>
-                        <li class="flew-row-line"><b>Backend :</b> CodeIgniter</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>A Corporate Recruitment Portal designed to streamline the hiring process and assist applicants in joining the company. Built with CodeIgniter and MySQL, it offers a user-friendly interface for submitting applications, managing personal data, and simplifying recruitment workflows for HR teams.</p>
-                </div>                         
-            </div>
+        <!-- Tabs -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10 md:mb-12">
+        <button
+            class="tab-button px-5 sm:px-6 py-2 rounded-full font-semibold transition-all"
+            :class="category==='web' ? 'bg-sky-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-sky-100'"
+            @click="category='web'">
+            Web
+        </button>
 
-            <div class="project-gallery" id="mobile-projects" style="display: none;">
-                <!-- Mobile Projects -->
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/serialization/login.png" alt="Login">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/serialization/dashboard.png" alt="Dashboard">
-                        </div>      
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/serialization/summary-sales-order.png" alt="Summary Sales Order">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/serialization/sales-order-detail.png" alt="Sales Order Detail">
-                        </div>     
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/serialization/loading.png" alt="Loading Screen">
-                        </div>                                                                                                                      
-                    </div>
-                    <h3>Corporate Serialization</h3>
-                    <ul>
-                        <li class="flex-row notactive"><span><b>Year :</b> 2018</span> <span>Inactive (or Not Active)</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> React Native & Realm Database</li>
-                        <li class="flew-row-line"><b>Backend :</b> Express JS</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>The Corporate Serialization System efficiently manages serialized products, offering features like sales order issue, move order issue, adjustments, pack/unpack serial, and changing organization units. It ensures accurate inventory tracking and smooth operations, improving efficiency and organization-wide coordination.</p>
-                </div> 
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/cosmos/login.png" alt="Login">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/cosmos/menu.png" alt="Menu">
-                        </div>      
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/cosmos/ship-confirm.png" alt="Ship Confirm">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/cosmos/ship-confirm-success.png" alt="Ship Confirm Success">
-                        </div>                                                                                                 
-                    </div>
-                    <h3>Logistics & Order Hub</h3>
-                    <ul>
-                        <li class="flex-row notactive"><span><b>Year :</b> 2018</span> <span>Inactive (or Not Active)</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> Java (using Android Studio) & SQLite</li>
-                        <li class="flew-row-line"><b>Backend :</b> CodeIgniter</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>A collaborative system for managing orders, supply chains, and operations, developed using Java in Android Studio. The application leverages an SQLite database for secure and efficient data storage. It ensures real-time tracking, streamlined workflows, and enhanced coordination across departments for optimal performance.</p>
-                </div>    
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/moderator-events/splashscreen.png" alt="Intro">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/moderator-events/login.png" alt="Login">
-                        </div>      
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/moderator-events/sidebar.png" alt="Sidebar">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/moderator-events/speakers.png" alt="Ship Confirm Success">
-                        </div>     
-                        <div class="slide">
-                            <img src="images/portfolio/mobile/moderator-events/speakers-detail.png" alt="Speakers Detail">
-                        </div>                                                                                                                    
-                    </div>
-                    <h3>Moderator Events</h3>
-                    <ul>
-                        <li class="flex-row notactive"><span><b>Year :</b> 2018</span> <span>Inactive (or Not Active)</span></li>
-                        <li class="flew-row-line"><b>Frontend :</b> React Native & Redux</li>
-                        <li class="flew-row-line"><b>Backend :</b> Express JS & Node JS</li>
-                        <li class="flew-row-line"><b>Database :</b> MySQL</li>
-                    </ul>
-                    <p>A mobile event moderator app built with React Native, Redux, and an Express API. It ensures seamless event management with real-time updates, efficient state handling, and smooth backend communication. This app provides moderators with an intuitive interface for easy event coordination and data management.</p>
-                </div>                               
-            </div>
+        <button
+            class="tab-button px-5 sm:px-6 py-2 rounded-full font-semibold transition-all"
+            :class="category==='mobile' ? 'bg-sky-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-sky-100'"
+            @click="category='mobile'">
+            Mobile
+        </button>
 
-            <div class="project-gallery" id="uiux-projects" style="display: none;">
-                <!-- UI/UX Projects -->
-                <div class="project-item">
-                    <div class="slideshow-container">
-                        <div class="slide">
-                            <img src="images/portfolio/uiux/pms/login.png" alt="Login">
-                        </div>    
-                        <div class="slide">
-                            <img src="images/portfolio/uiux/pms/dashboard.png" alt="Dashboard">
-                        </div>      
-                        <div class="slide">
-                            <img src="images/portfolio/uiux/pms/properties.png" alt="Properties">
-                        </div>
-                        <div class="slide">
-                            <img src="images/portfolio/uiux/pms/service-management.png" alt="service Management">
-                        </div>                                                                                                                       
-                    </div>
-                </div>   
-            </div>
+        <button
+            class="tab-button px-5 sm:px-6 py-2 rounded-full font-semibold transition-all"
+            :class="category==='uiux' ? 'bg-sky-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-sky-100'"
+            @click="category='uiux'">
+            UI/UX
+        </button>
         </div>
+
+        <!-- Grid -->
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <template x-for="(project, idx) in filteredProjects" :key="idx">
+            <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden border border-gray-100">
+            <!-- Thumbnail area -->
+            <div
+                class="w-full h-48 sm:h-52 bg-gray-50 overflow-hidden relative group cursor-pointer flex items-center justify-center"
+                @click="openLightbox(project)"
+            >
+                <img
+                :src="project.images[0]"
+                :alt="project.title"
+                class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
+                />
+            </div>
+
+            <div class="p-4 sm:p-6 text-left">
+                <p class="text-xs uppercase text-gray-500 mb-1" x-text="project.type"></p>
+                <h3 class="text-md sm:text-lg font-semibold text-gray-900 mb-2" x-text="project.title"></h3>
+                <p class="text-gray-600 text-sm sm:text-base mb-3" x-text="project.desc"></p>
+
+                <!-- metadata -->
+                <div class="flex items-center justify-between">
+                <button
+                    @click="openLightbox(project)"
+                    class="text-sky-600 font-semibold hover:underline text-sm sm:text-base"
+                >
+                    View
+                </button>
+                <div class="text-xs text-gray-400" x-text="project.images.length + ' image(s)'"></div>
+                </div>
+            </div>
+            </article>
+        </template>
+        </div>
+    </div>
+
+    <!-- Lightbox (centered) -->
+    <div
+        x-show="lightbox.open"
+        x-cloak
+        x-transition.opacity.duration.200ms
+        @keydown.window.escape="closeLightbox()"
+        @keydown.window.arrow-right="nextImage()"
+        @keydown.window.arrow-left="prevImage()"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+        style="backdrop-filter: blur(6px);"
+    >
+        <div class="relative w-full max-w-4xl mx-auto" @click.away="closeLightbox()">
+        <!-- Counter -->
+        <div
+            x-show="lightbox.images.length > 1"
+            x-transition
+            class="absolute left-1/2 -top-8 transform -translate-x-1/2 text-sm text-white/90 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm"
+        >
+            <span x-text="(lightbox.index + 1) + ' / ' + lightbox.images.length"></span>
+        </div>
+
+        <!-- Image container -->
+        <div class="overflow-hidden rounded-lg">
+            <img
+            :src="lightbox.images[lightbox.index]"
+            alt="Preview"
+            x-transition.opacity.duration.250ms
+            class="mx-auto max-h-[80vh] sm:max-h-[85vh] w-auto object-contain rounded-lg shadow-lg bg-white/5"
+            />
+        </div>
+
+        <!-- Prev / Next -->
+        <button
+            x-show="lightbox.images.length > 1"
+            x-transition
+            @click.stop="prevImage()"
+            class="hidden md:flex items-center justify-center absolute left-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full w-10 h-10"
+            aria-label="Previous image"
+        >
+            ‹
+        </button>
+
+        <button
+            x-show="lightbox.images.length > 1"
+            x-transition
+            @click.stop="nextImage()"
+            class="hidden md:flex items-center justify-center absolute right-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white rounded-full w-10 h-10"
+            aria-label="Next image"
+        >
+            ›
+        </button>
+
+        <!-- Mobile Hot Zones -->
+        <div class="md:hidden">
+            <div class="absolute inset-y-0 left-0 w-1/2" @click.stop="prevImage()" x-show="lightbox.images.length > 1"></div>
+            <div class="absolute inset-y-0 right-0 w-1/2" @click.stop="nextImage()" x-show="lightbox.images.length > 1"></div>
+        </div>
+
+        <!-- Close -->
+        <button
+            @click="closeLightbox()"
+            class="absolute top-3 right-3 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 pb-0.5 pt-0.5"
+            aria-label="Close"
+        >
+            ✕
+        </button>
+        </div>
+    </div>
     </section>
 
-    <!-- My Skills & Resume Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>My Skills & Resume</h2>
 
-            <div class="skills-container">
-                <div class="skills-item">
-                    <h3>Coding Skills</h3>
-                    <ul>
-                        <li>HTML/CSS/JS/SASS/jQuery</li>
-                        <li>React/Bootstrap/Material UI</li>
-                        <li>Node.js/Express.js/API</li>
-                        <li>PostgreSQL/MySQL</li>
-                        <li>React Native</li>
-                        <li>CodeIgniter</li>
-                    </ul>
-                </div>
-                <div class="skills-item">
-                    <h3>Tools & Technologies</h3>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>Git & Github</li> 
-                        <li>Firebase</li>
-                        <li>Postman</li>
-                        <li>Figma</li>
-                    </ul>
-                </div>
-                <div class="skills-item">
-                    <h3>Industrial Knowledge</h3>
-                    <ul>
-                        <li>Web Development</li>
-                        <li>App Development</li>
-                        <li>UX/UI Design</li>
-                    </ul>
-                </div>
-                <div class="skills-item">
-                    <h3>Other Skills</h3>
-                    <ul>
-                        <li>Project Management</li>
-                        <li>Agile Methodology</li>
-                        <li>Problem Solving</li>
-                    </ul>
-                </div>
-                <div class="skills-item">
-                    <h3>Language Skills</h3>
-                    <ul>
-                        <li>English (Fluent)</li>
-                        <li>Indonesian (Native)</li>
-                    </ul>
-                </div>
-                <div class="skills-item">
-                    <h3>Interest</h3>
-                    <ul>
-                        <li>Coding</li>
-                        <li>Traveling</li>
-                        <li>Photography</li>
-                        <li>Music</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 md:py-24 bg-gradient-to-b from-sky-50 via-white to-sky-100">
+    <div class="max-w-6xl mx-auto px-6 md:px-10 lg:px-20">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-10 md:mb-12">
+        Technical & Soft Skills
+        </h2>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Coding Skills -->
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold text-lg mb-3 text-sky-600">Coding Skills</h3>
+            <ul class="text-gray-700 space-y-1 text-sm sm:text-base">
+            <li>HTML/CSS/JS/SASS/jQuery</li>
+            <li>React/Bootstrap/Material UI</li>
+            <li>Node.js/Express.js/API</li>
+            <li>PostgreSQL/MySQL</li>
+            <li>React Native</li>
+            <li>Flutter</li>
+            </ul>
         </div>
+
+        <!-- Tools & Technologies -->
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold text-lg mb-3 text-sky-600">Tools & Technologies</h3>
+            <ul class="text-gray-700 space-y-1 text-sm sm:text-base">
+            <li>Visual Studio Code</li>
+            <li>Git & Github</li>
+            <li>Firebase</li>
+            <li>Postman</li>
+            <li>Figma</li>
+            </ul>
+        </div>
+
+        <!-- Industrial Knowledge -->
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold text-lg mb-3 text-sky-600">Industrial Knowledge</h3>
+            <ul class="text-gray-700 space-y-1 text-sm sm:text-base">
+            <li>Web Development</li>
+            <li>Application Development</li>
+            </ul>
+        </div>
+
+        <!-- Other Skills -->
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold text-lg mb-3 text-sky-600">Other Skills</h3>
+            <ul class="text-gray-700 space-y-1 text-sm sm:text-base">
+            <li>Project Management</li>
+            <li>Agile Methodology</li>
+            <li>Problem Solving</li>
+            </ul>
+        </div>
+
+        <!-- Language Skills -->
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold text-lg mb-3 text-sky-600">Language Skills</h3>
+            <ul class="text-gray-700 space-y-1 text-sm sm:text-base">
+            <li>English (Fluent)</li>
+            <li>Indonesian (Native)</li>
+            </ul>
+        </div>
+
+        <!-- Interest -->
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-md p-5 sm:p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold text-lg mb-3 text-sky-600">Interest</h3>
+            <ul class="text-gray-700 space-y-1 text-sm sm:text-base">
+            <li>Coding</li>
+            <li>Traveling</li>
+            <li>Photography</li>
+            <li>Music</li>
+            </ul>
+        </div>
+        </div>
+    </div>
     </section>
+
+
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 AMANGR DESIGN | Specializing in Web and Mobile Application Development and Creative Designs</p>
-        </div>
+    <footer class="bg-gray-100 text-center py-6 mt-0 border-t border-gray-200">
+      <p class="text-gray-600 text-sm">
+        © 2024 AMANGR DESIGN | Web & Mobile App Development • Creative Design Studio
+      </p>
     </footer>
 
-    <!-- JavaScript for Tab functionality -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <button
+    id="scrollToTopBtn"
+    class="fixed bottom-6 right-6 bg-sky-600 text-white p-3 rounded-full shadow-lg hover:bg-sky-700 transition-opacity opacity-0 pointer-events-none z-50"
+    aria-label="Scroll to top"
+    >
+    <!-- Animasi panah -->
+    <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"></path>
+    </svg>
+    </button>    
+
+    <!-- JS: Tabs -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('.tab-button');
-            const galleries = document.querySelectorAll('.project-gallery');
-            
-            // Set up event listeners for each tab
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const target = tab.dataset.tab;
-                    
-                    // Remove 'active' class from all tabs
-                    tabs.forEach(t => t.classList.remove('active'));
-                    
-                    // Hide all project galleries
-                    galleries.forEach(gallery => gallery.style.display = 'none');
-                    
-                    // Add 'active' class to the clicked tab
-                    tab.classList.add('active');
-                    
-                    // Display the corresponding project gallery
-                    const targetGallery = document.getElementById(`${target}-projects`);
-                    
-                    if (targetGallery) {
-                        targetGallery.style.display = 'grid'; // Show the gallery as grid
-                    }
-                });
-            });
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".tab-button");
+        const galleries = document.querySelectorAll(".project-gallery");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const target = tab.dataset.tab;
+
+            tabs.forEach((t) =>
+              t.classList.remove("bg-sky-600", "text-white", "shadow-sm")
+            );
+            tab.classList.add("bg-sky-600", "text-white", "shadow-sm");
+
+            galleries.forEach((gallery) => (gallery.style.display = "none"));
+            document.getElementById(`${target}-projects`).style.display = "grid";
+          });
         });
+      });
     </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Temukan semua elemen slideshow-container
-        let slideshowContainers = document.querySelectorAll('.slideshow-container');
+    <!-- JS: Slideshow -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".slideshow-container").forEach((container) => {
+          const slides = container.querySelectorAll(".slide");
+          let index = 0;
 
-        // Iterasi setiap slideshow-container
-        slideshowContainers.forEach((container) => {
-            let slides = container.querySelectorAll('.slide'); // Slide dalam container ini
-            let currentIndex = 0;
+          function showSlide(i) {
+            slides.forEach((s, n) => s.classList.toggle("hidden", n !== i));
+          }
 
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.classList.remove('active');
-                    if (i === index) {
-                        slide.classList.add('active');
-                    }
-                });
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                showSlide(currentIndex);
-            }
-
-            // Mulai slideshow untuk container ini
-            showSlide(currentIndex);
-            setInterval(nextSlide, 3000); // Ganti slide setiap 3 detik
+          setInterval(() => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+          }, 3000);
         });
+      });
+    </script>
+
+    <script>
+    // Scroll to Top Button
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+    // Tampilkan tombol saat scroll > 200px
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+        scrollBtn.classList.remove("opacity-0", "pointer-events-none");
+        scrollBtn.classList.add("opacity-100", "pointer-events-auto");
+        } else {
+        scrollBtn.classList.add("opacity-0", "pointer-events-none");
+        scrollBtn.classList.remove("opacity-100", "pointer-events-auto");
+        }
     });
-</script>  
 
-
-</body>
+    // Scroll ke atas saat tombol diklik
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    </script>    
+  </body>
 </html>

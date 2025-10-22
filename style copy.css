@@ -1,0 +1,498 @@
+/* General styling for the page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #f5f5f5;
+    color: white;
+    padding: 1rem 0;
+    border-bottom: 1px solid #A6ACAF;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto; /* Memusatkan kontainer */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 30px; /* Sesuaikan ukuran logo */
+    height: 30px; /* Pastikan ukuran logo proporsional */
+    margin-right: 10px; /* Memberikan jarak antara logo dan teks */
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+header h1 {
+    margin-left: 20px;
+    /* font-size: 2rem; */
+}
+
+header h1.logo {
+    font-size: 1.7rem;
+    margin: 0;
+    color: #000000;
+    /* color: #1a2b7b !important; */
+    /* font-family: 'Montserrat', sans-serif !important; */
+    /* font-family: 'Mazzard H', sans-serif; */
+    /* font-weight: 900 !important; */
+    letter-spacing: -0.5px;
+    font-weight: normal !important;
+}
+
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    /* color: white; */
+    color: #202224 !important;
+    font-size: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 80%;                 /* Menggunakan persentase agar responsif */
+    margin: 0 auto;             /* Memusatkan elemen secara horizontal */
+    height: auto;               /* Mengatur tinggi otomatis agar konten dapat mengalir */
+}
+
+.about h2 {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+}
+
+.about h2.about-text-header-h2{
+    text-align: left;
+    font-family: 'Poppins';
+    font-weight: 900;
+}
+
+.about h3.about-text-header-h3{
+    text-align: left;
+}
+
+.about p.about-text-p{
+    text-align: left;
+    color: #74788D;
+}
+
+
+/* My Skills Section */
+.skills {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 82%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: auto;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.skills h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membagi menjadi 3 kolom */
+    gap: 20px;
+}
+
+/* Styling for each skill item */
+.skills-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.skills-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.skills-item ul {
+    text-align: left;
+}
+
+.skills-item ul li {
+    font-size: 0.8rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .skills-item h3 {
+        font-size: 1rem;
+    }
+
+    .skills-item ul li {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .skills h2 {
+        font-size: 1.2rem;
+    }
+
+    .skills-item {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .skills-item h3 {
+        font-size: 1rem;
+    }
+
+    .skills-item ul li {
+        font-size: 0.9rem !important;
+    }
+}
+
+
+/* Projects Section */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #333;
+    color: white;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Sesuaikan dengan lebar induk */
+    height: 300px; /* Atur tinggi slide */
+    overflow: hidden; /* Sembunyikan area di luar kontainer */
+    border-radius: 8px; /* Membuat sudut membulat */
+}
+
+/* Slide Styles */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menyesuaikan gambar dengan area slide */
+    border-radius: 8px; /* Membuat gambar sudut membulat */
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%; /* Responsif: Kurangi lebar agar lebih kecil di layar kecil */
+    max-width: 1200px; /* Batasi lebar maksimum */
+    margin: 0 auto;
+    /* margin-bottom: 100px; */
+    height: auto;
+}
+
+.projects h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Project Gallery Grid */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
+    gap: 20px; /* Jarak antar kolom dan baris */
+    margin-top: 20px;
+}
+
+/* Individual Project Items */
+.project-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-item ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.project-item ul li {
+    font-size: 0.8rem;
+    text-align: left;
+    color: #555;
+    margin: 5px 0;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.project-item p {
+    font-size: 0.8rem;
+    color: #555;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.project-item ul li.flex-row span:first-child {
+    color: #1E90FF; /* Oranye */
+}
+
+.project-item ul li.flex-row span:last-child {
+    color: #4CAF50; /* Hijau */
+}
+
+.project-item ul li.flex-row.notactive span:last-child {
+    color: #F44336; /* Hijau */
+}
+
+.project-item ul li.flex-row {
+    display: flex;
+    justify-content: space-between; /* Membuat konten berada di ujung kiri dan kanan */
+    align-items: center; /* Menjaga elemen tetap sejajar secara vertikal */
+    margin-bottom: 15px; /* Memberikan jarak antar baris */
+}
+
+.project-item ul li.flex-row span {
+    font-size: 0.8rem; /* Sesuaikan ukuran teks */
+    color: #555; /* Warna teks untuk konsistensi */
+}
+
+.project-item ul li.flew-row-line::after {
+    content: ''; /* Membuat elemen pseudo untuk garis bawah */
+    display: block; /* Mengubah elemen menjadi block */
+    width: 100%; /* Atur panjang garis (50% dari lebar elemen) */
+    height: 1px; /* Ketebalan garis */
+    background-color: #ddd; /* Warna garis */
+    margin: 5px 0 0; /* Jarak antara teks dan garis */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 100px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-image img {
+    width: 210px; 
+    /* Sesuaikan ukuran foto profil */
+    border-radius: 50%; /* Menjadikan gambar berbentuk bulat */
+}
+
+
+h3 {
+    margin-bottom: 10px; /* Memberikan jarak antara judul dan konten */
+}
+
+
+
+/* Media Query untuk Responsivitas */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Pada layar lebih besar, gambar dan teks di samping */
+        justify-content: space-between;
+    }
+
+    .about-text {
+        padding-right: 40px; /* Memberikan jarak lebih pada layar lebih besar */
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        width: 95%;             /* Lebar lebih kecil pada layar lebih kecil (misalnya tablet) */
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+    .tab-button {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .about {
+        width: 100%;            /* Lebar 100% pada layar kecil (misalnya ponsel) */
+    }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-item p,
+    .project-item ul li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .skills-item h3 {
+        font-size: 1rem;
+    }
+
+    .skills-item ul li {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .skills h2 {
+        font-size: 1.2rem;
+    }
+
+    .skills-item {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .skills-item h3 {
+        font-size: 1rem;
+    }
+
+    .skills-item ul li {
+        font-size: 0.9rem !important;
+    }
+}
